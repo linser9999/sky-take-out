@@ -4,13 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29646867-ff42-41d0-9f36-905049c79cef" name="Changes" comment="新增员工业务代码开发">
-      <change beforePath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/config/WebMvcConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/config/WebMvcConfiguration.java" afterDir="false" />
+    <list default="true" id="29646867-ff42-41d0-9f36-905049c79cef" name="Changes" comment="员工分页查询业务代码开发">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/controller/admin/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/controller/admin/EmployeeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/mapper/EmployeeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/mapper/EmployeeMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/service/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/service/EmployeeService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/service/impl/EmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/service/impl/EmployeeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sky-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sky-server/src/main/resources/mapper/EmployeeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/resources/mapper/EmployeeMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sky-server/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sky-server/target/classes/com/sky/controller/admin/EmployeeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/target/classes/com/sky/controller/admin/EmployeeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sky-server/target/classes/com/sky/mapper/EmployeeMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/target/classes/com/sky/mapper/EmployeeMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sky-server/target/classes/com/sky/service/EmployeeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/target/classes/com/sky/service/EmployeeService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sky-server/target/classes/com/sky/service/impl/EmployeeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/target/classes/com/sky/service/impl/EmployeeServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sky-server/target/classes/mapper/EmployeeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/target/classes/mapper/EmployeeMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +66,9 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "reactor",
     "settings.editor.splitter.proportion": "0.28230184",
     "vue.rearranger.settings.migration": "true"
@@ -109,7 +119,7 @@
       <option name="presentableId" value="Default" />
       <updated>1758077622111</updated>
       <workItem from="1758077623375" duration="8670000" />
-      <workItem from="1758154088960" duration="10271000" />
+      <workItem from="1758154088960" duration="13269000" />
     </task>
     <task id="LOCAL-00001" summary="苍穹外码项目初始化代码">
       <option name="closed" value="true" />
@@ -127,7 +137,15 @@
       <option name="project" value="LOCAL" />
       <updated>1758161421974</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="员工分页查询业务代码开发">
+      <option name="closed" value="true" />
+      <created>1758166515544</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1758166515544</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -147,7 +165,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="苍穹外码项目初始化代码" />
     <MESSAGE value="新增员工业务代码开发" />
-    <option name="LAST_COMMIT_MESSAGE" value="新增员工业务代码开发" />
+    <MESSAGE value="员工分页查询业务代码开发" />
+    <option name="LAST_COMMIT_MESSAGE" value="员工分页查询业务代码开发" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
