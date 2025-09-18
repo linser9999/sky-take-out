@@ -2,16 +2,25 @@ package com.sky.service.impl;
 
 import com.sky.constant.MessageConstant;
 import com.sky.constant.StatusConstant;
+import com.sky.context.BaseContext;
+import com.sky.dto.EmployeeDTO;
 import com.sky.dto.EmployeeLoginDTO;
 import com.sky.entity.Employee;
 import com.sky.exception.AccountLockedException;
 import com.sky.exception.AccountNotFoundException;
 import com.sky.exception.PasswordErrorException;
 import com.sky.mapper.EmployeeMapper;
+import com.sky.result.Result;
 import com.sky.service.EmployeeService;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.DigestUtils;
+
+import java.nio.charset.StandardCharsets;
+import java.time.LocalDateTime;
+
+import static com.sky.constant.PasswordConstant.DEFAULT_PASSWORD;
 
 @Service
 public class EmployeeServiceImpl implements EmployeeService {
@@ -39,7 +48,7 @@ public class EmployeeServiceImpl implements EmployeeService {
         }
 
         //密码比对
-        // TODO 后期需要进行md5加密，然后再进行比对
+        password = DigestUtils.md5DigestAsHex(password.getBytes());
         if (!password.equals(employee.getPassword())) {
             //密码错误
             throw new PasswordErrorException(MessageConstant.PASSWORD_ERROR);
@@ -52,6 +61,39 @@ public class EmployeeServiceImpl implements EmployeeService {
 
         //3、返回实体对象
         return employee;
+    }
+
+    /**
+     * 新增员工
+     * @param employeeDTO
+     * @return
+     */
+    @Override
+    public Result save(EmployeeDTO employeeDTO) {
+        // 1.将EmployeeDTO转为Employee
+        Employee employee = new Employee();
+        BeanUtils.copyProperties(employeeDTO, employee);
+
+        // 2.设置默认密码
+        employee.setPassword(DigestUtils.md5DigestAsHex(DEFAULT_PASSWORD.getBytes(StandardCharsets.UTF_8)));
+
+        // 3.设置创建时间和修改时间
+        LocalDateTime now = LocalDateTime.now();
+        employee.setUpdateTime(now);
+        employee.setCreateTime(now);
+
+        // 4.设置创建人和修改人
+        employee.setCreateUser(BaseContext.getCurrentId());
+        employee.setUpdateUser(BaseContext.getCurrentId());
+
+        // 5.设置登录状态
+        employee.setStatus(StatusConstant.ENABLE);
+
+        // 6.保存
+        employeeMapper.insert(employee);
+
+        // 7.返回
+        return Result.success();
     }
 
 }
