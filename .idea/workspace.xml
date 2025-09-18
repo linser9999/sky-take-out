@@ -4,25 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29646867-ff42-41d0-9f36-905049c79cef" name="Changes" comment="员工分页查询业务代码开发">
+    <list default="true" id="29646867-ff42-41d0-9f36-905049c79cef" name="Changes" comment="公共字段自动填充代码框架搭建好，代码逻辑还没实现">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/controller/admin/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/controller/admin/EmployeeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/mapper/EmployeeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/mapper/EmployeeMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/service/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/service/EmployeeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/service/impl/EmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/service/impl/EmployeeServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sky-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sky-server/src/main/resources/mapper/EmployeeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/resources/mapper/EmployeeMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sky-server/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sky-server/target/classes/com/sky/controller/admin/EmployeeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/target/classes/com/sky/controller/admin/EmployeeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sky-server/target/classes/com/sky/mapper/EmployeeMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/target/classes/com/sky/mapper/EmployeeMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sky-server/target/classes/com/sky/service/EmployeeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/target/classes/com/sky/service/EmployeeService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sky-server/target/classes/com/sky/service/impl/EmployeeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/target/classes/com/sky/service/impl/EmployeeServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sky-server/target/classes/mapper/EmployeeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/target/classes/mapper/EmployeeMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sky-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sky-common/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sky-common/src/main/java/com/sky/aspect/AutoFillAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/aspect/AutoFillAspect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sky-common/target/classes/com/sky/aspect/AutoFillAspect.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="AnnotationType" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -40,6 +39,9 @@
   <component name="MavenRunner">
     <option name="jreName" value="17" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
@@ -50,6 +52,9 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Maven.sky-common [clean].executor": "Run",
+    "Maven.sky-server [clean].executor": "Run",
+    "Maven.sky-take-out [clean].executor": "Run",
     "Maven.sky-take-out [compile].executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
@@ -57,10 +62,10 @@
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "Spring Boot.SkyApplication.executor": "Run",
+    "Spring Boot.SkyApplication.executor": "Debug",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "E:/project/sky-take-out",
+    "last_opened_file_path": "E:/project/sky-take-out/sky-server/src/main/java/com/sky/controller/admin",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -69,7 +74,7 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "reactor",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
     "settings.editor.splitter.proportion": "0.28230184",
     "vue.rearranger.settings.migration": "true"
   },
@@ -81,6 +86,15 @@
 }]]></component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\project\sky-take-out\sky-server\src\main\java\com\sky\controller\admin" />
+      <recent name="E:\project\sky-take-out\sky-server\src\main\java\com\sky\service\impl" />
+      <recent name="E:\project\sky-take-out\sky-server\src\main\java\com\sky\service" />
+      <recent name="E:\project\sky-take-out\sky-server\src\main\resources\mapper" />
+      <recent name="E:\project\sky-take-out\sky-server\src\main\java\com\sky\mapper" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="SkyApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
@@ -119,7 +133,7 @@
       <option name="presentableId" value="Default" />
       <updated>1758077622111</updated>
       <workItem from="1758077623375" duration="8670000" />
-      <workItem from="1758154088960" duration="13269000" />
+      <workItem from="1758154088960" duration="26083000" />
     </task>
     <task id="LOCAL-00001" summary="苍穹外码项目初始化代码">
       <option name="closed" value="true" />
@@ -145,7 +159,23 @@
       <option name="project" value="LOCAL" />
       <updated>1758166515544</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="启用、禁用员工账号业务代码开发">
+      <option name="closed" value="true" />
+      <created>1758172434556</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1758172434556</updated>
+    </task>
+    <task id="LOCAL-00005" summary="公共字段自动填充代码框架搭建好，代码逻辑还没实现">
+      <option name="closed" value="true" />
+      <created>1758183841535</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1758183841535</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -166,7 +196,9 @@
     <MESSAGE value="苍穹外码项目初始化代码" />
     <MESSAGE value="新增员工业务代码开发" />
     <MESSAGE value="员工分页查询业务代码开发" />
-    <option name="LAST_COMMIT_MESSAGE" value="员工分页查询业务代码开发" />
+    <MESSAGE value="启用、禁用员工账号业务代码开发" />
+    <MESSAGE value="公共字段自动填充代码框架搭建好，代码逻辑还没实现" />
+    <option name="LAST_COMMIT_MESSAGE" value="公共字段自动填充代码框架搭建好，代码逻辑还没实现" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
