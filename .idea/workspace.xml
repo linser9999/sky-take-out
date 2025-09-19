@@ -4,11 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29646867-ff42-41d0-9f36-905049c79cef" name="Changes" comment="公共字段自动填充代码框架搭建好，代码逻辑还没实现">
+    <list default="true" id="29646867-ff42-41d0-9f36-905049c79cef" name="Changes" comment="新增菜品业务代码开发">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/90fba23c-6725-4d22-8a5b-292db15b9f56.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/90fba23c-6725-4d22-8a5b-292db15b9f56.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sky-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sky-common/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sky-common/src/main/java/com/sky/aspect/AutoFillAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/aspect/AutoFillAspect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sky-common/target/classes/com/sky/aspect/AutoFillAspect.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sky-common/target/classes/META-INF/spring-configuration-metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/sky-common/target/classes/META-INF/spring-configuration-metadata.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/mapper/DishMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/mapper/DishMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sky-server/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/resources/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sky-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sky-server/target/classes/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/target/classes/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sky-server/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sky-server/target/classes/com/sky/mapper/DishMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/target/classes/com/sky/mapper/DishMapper.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +25,7 @@
       <list>
         <option value="AnnotationType" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -27,6 +33,18 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "linser9999"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/linser9999/sky-take-out.git",
+    "accountId": "9df21ee9-cf50-4a23-b5d8-e06ec100820f"
+  }
+}]]></component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -62,10 +80,10 @@
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "Spring Boot.SkyApplication.executor": "Debug",
+    "Spring Boot.SkyApplication.executor": "Run",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "E:/project/sky-take-out/sky-server/src/main/java/com/sky/controller/admin",
+    "last_opened_file_path": "D:/Desktop/第1章",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -74,7 +92,7 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "settings.editor.splitter.proportion": "0.28230184",
     "vue.rearranger.settings.migration": "true"
   },
@@ -133,7 +151,8 @@
       <option name="presentableId" value="Default" />
       <updated>1758077622111</updated>
       <workItem from="1758077623375" duration="8670000" />
-      <workItem from="1758154088960" duration="26083000" />
+      <workItem from="1758154088960" duration="27300000" />
+      <workItem from="1758245843333" duration="17463000" />
     </task>
     <task id="LOCAL-00001" summary="苍穹外码项目初始化代码">
       <option name="closed" value="true" />
@@ -175,7 +194,31 @@
       <option name="project" value="LOCAL" />
       <updated>1758183841535</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="公共字段自动填充代码实现">
+      <option name="closed" value="true" />
+      <created>1758187730278</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1758187730278</updated>
+    </task>
+    <task id="LOCAL-00007" summary="新增菜品业务代码开发">
+      <option name="closed" value="true" />
+      <created>1758269487807</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1758269487809</updated>
+    </task>
+    <task id="LOCAL-00008" summary="新增菜品业务代码开发">
+      <option name="closed" value="true" />
+      <created>1758274286141</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1758274286141</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -198,7 +241,9 @@
     <MESSAGE value="员工分页查询业务代码开发" />
     <MESSAGE value="启用、禁用员工账号业务代码开发" />
     <MESSAGE value="公共字段自动填充代码框架搭建好，代码逻辑还没实现" />
-    <option name="LAST_COMMIT_MESSAGE" value="公共字段自动填充代码框架搭建好，代码逻辑还没实现" />
+    <MESSAGE value="公共字段自动填充代码实现" />
+    <MESSAGE value="新增菜品业务代码开发" />
+    <option name="LAST_COMMIT_MESSAGE" value="新增菜品业务代码开发" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
