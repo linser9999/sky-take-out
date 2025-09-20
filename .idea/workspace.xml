@@ -4,27 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29646867-ff42-41d0-9f36-905049c79cef" name="Changes" comment="新增菜品业务代码开发">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+    <list default="true" id="29646867-ff42-41d0-9f36-905049c79cef" name="Changes" comment="所有关于菜品业务代码开发">
+      <change afterPath="$PROJECT_DIR$/sky-common/src/main/java/com/sky/exception/NotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/controller/admin/SetMealController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/mapper/SetmealDishMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/service/SetMealService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/service/impl/SetMealServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sky-server/src/main/resources/mapper/SetmealDishMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sky-server/src/main/resources/mapper/SetmealMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sky-common/src/main/java/com/sky/constant/MessageConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/sky-common/src/main/java/com/sky/constant/MessageConstant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sky-common/target/classes/com/sky/constant/MessageConstant.class" beforeDir="false" afterPath="$PROJECT_DIR$/sky-common/target/classes/com/sky/constant/MessageConstant.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sky-common/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/sky-common/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/controller/admin/CommonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/controller/admin/CommonController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/controller/admin/DishControlller.java" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/controller/admin/DishControlller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/mapper/CategoryMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/mapper/CategoryMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/mapper/DishFlavorMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/mapper/DishFlavorMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/mapper/DishMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/mapper/DishMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/mapper/SetmealMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/mapper/SetmealMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/service/DishService.java" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/service/DishService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/service/impl/DishServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/service/impl/DishServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sky-server/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/resources/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sky-server/src/main/resources/mapper/DishFlavorMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/resources/mapper/DishFlavorMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sky-server/src/main/resources/mapper/DishMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/resources/mapper/DishMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sky-server/target/classes/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/target/classes/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sky-server/target/classes/com/sky/controller/admin/CommonController.class" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/target/classes/com/sky/controller/admin/CommonController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sky-server/target/classes/com/sky/controller/admin/DishControlller.class" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/target/classes/com/sky/controller/admin/DishControlller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sky-server/target/classes/com/sky/mapper/CategoryMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/target/classes/com/sky/mapper/CategoryMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sky-server/target/classes/com/sky/mapper/DishFlavorMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/target/classes/com/sky/mapper/DishFlavorMapper.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sky-server/target/classes/com/sky/mapper/DishMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/target/classes/com/sky/mapper/DishMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sky-server/target/classes/com/sky/mapper/SetmealMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/target/classes/com/sky/mapper/SetmealMapper.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sky-server/target/classes/com/sky/service/DishService.class" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/target/classes/com/sky/service/DishService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sky-server/target/classes/com/sky/service/impl/DishServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/target/classes/com/sky/service/impl/DishServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sky-server/target/classes/mapper/DishFlavorMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/target/classes/mapper/DishFlavorMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sky-server/target/classes/mapper/DishMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/target/classes/mapper/DishMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,8 +40,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="AnnotationType" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -91,8 +96,9 @@
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "Spring Boot.SkyApplication.executor": "Run",
+    "Spring Boot.SkyApplication.executor": "Debug",
     "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/Desktop/第1章",
     "node.js.detected.package.eslint": "true",
@@ -164,7 +170,8 @@
       <workItem from="1758077623375" duration="8670000" />
       <workItem from="1758154088960" duration="27300000" />
       <workItem from="1758245843333" duration="17463000" />
-      <workItem from="1758274540964" duration="12213000" />
+      <workItem from="1758274540964" duration="19377000" />
+      <workItem from="1758333776252" duration="11489000" />
     </task>
     <task id="LOCAL-00001" summary="苍穹外码项目初始化代码">
       <option name="closed" value="true" />
@@ -238,7 +245,15 @@
       <option name="project" value="LOCAL" />
       <updated>1758274617464</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="所有关于菜品业务代码开发">
+      <option name="closed" value="true" />
+      <created>1758293508365</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1758293508365</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -263,7 +278,8 @@
     <MESSAGE value="公共字段自动填充代码框架搭建好，代码逻辑还没实现" />
     <MESSAGE value="公共字段自动填充代码实现" />
     <MESSAGE value="新增菜品业务代码开发" />
-    <option name="LAST_COMMIT_MESSAGE" value="新增菜品业务代码开发" />
+    <MESSAGE value="所有关于菜品业务代码开发" />
+    <option name="LAST_COMMIT_MESSAGE" value="所有关于菜品业务代码开发" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

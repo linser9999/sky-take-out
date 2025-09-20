@@ -185,4 +185,15 @@ public class DishServiceImpl implements DishService {
 
         return Result.success();
     }
+
+    /**
+     * 根据分类id查询菜品
+     * @param categoryId
+     * @return
+     */
+    @Override
+    public Result<List<DishVO>> getByCategoryId(Long categoryId) {
+        List<DishVO> list = dishMapper.getByCategoryId(categoryId);
+        return Result.success(list);
+    }
 }

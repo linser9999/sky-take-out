@@ -50,4 +50,11 @@ public interface DishService {
      * @return
      */
     Result startOrStop(Integer status, Long id);
+
+    /**
+     * 根据分类id查询菜品
+     * @param categoryId
+     * @return
+     */
+    Result<List<DishVO>> getByCategoryId(Long categoryId);
 }

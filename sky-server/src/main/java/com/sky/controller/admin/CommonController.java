@@ -20,7 +20,7 @@ import java.util.UUID;
  * 通用接口
  */
 @RestController
-@Api("通用接口")
+@Api(tags = "通用接口")
 @Slf4j
 @RequestMapping("/admin/common")
 public class CommonController {

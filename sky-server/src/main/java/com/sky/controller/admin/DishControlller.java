@@ -17,7 +17,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/admin/dish")
 @Slf4j
-@Api("菜品管理相关接口")
+@Api(tags = "菜品管理相关接口")
 public class DishControlller {
 
     @Autowired
@@ -29,6 +29,7 @@ public class DishControlller {
      * @return
      */
     @PostMapping
+    @ApiOperation(value = "新增菜品")
     public Result sava(@RequestBody DishDTO dishDTO) {
         log.info("新增菜品:{}", dishDTO);
         dishService.saveWithFlavor(dishDTO);
@@ -96,5 +97,17 @@ public class DishControlller {
     public Result startOrStop(@PathVariable Integer status, Long id) {
         log.info("设置菜品id{}禁用启用情况：{}", id, status);
         return dishService.startOrStop(status, id);
+    }
+
+    /**
+     * 根据分类id查询菜品
+     * @param categoryId
+     * @return
+     */
+    @GetMapping("/list")
+    @ApiOperation("根据分类id查询菜品")
+    public Result<List<DishVO>> getByCategoryId(Long categoryId) {
+        log.info("根据分类id查询菜品：{}", categoryId);
+        return dishService.getByCategoryId(categoryId);
     }
 }

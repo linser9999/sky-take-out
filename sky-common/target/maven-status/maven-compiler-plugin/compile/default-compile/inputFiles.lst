@@ -7,6 +7,7 @@ E:\project\sky-take-out\sky-common\src\main\java\com\sky\utils\HttpClientUtil.ja
 E:\project\sky-take-out\sky-common\src\main\java\com\sky\exception\AddressBookBusinessException.java
 E:\project\sky-take-out\sky-common\src\main\java\com\sky\constant\JwtClaimsConstant.java
 E:\project\sky-take-out\sky-common\src\main\java\com\sky\exception\AccountLockedException.java
+E:\project\sky-take-out\sky-common\src\main\java\com\sky\exception\NotFoundException.java
 E:\project\sky-take-out\sky-common\src\main\java\com\sky\properties\WeChatProperties.java
 E:\project\sky-take-out\sky-common\src\main\java\com\sky\constant\MessageConstant.java
 E:\project\sky-take-out\sky-common\src\main\java\com\sky\exception\OrderBusinessException.java
