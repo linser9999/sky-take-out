@@ -4,18 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29646867-ff42-41d0-9f36-905049c79cef" name="Changes" comment="c端查看购物车业务代码开发">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/controller/user/ShoppingCartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/controller/user/ShoppingCartController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/mapper/ShoppingCartMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/mapper/ShoppingCartMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/service/ShoppingCartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/service/ShoppingCartService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/service/impl/ShoppingCartServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/service/impl/ShoppingCartServiceImpl.java" afterDir="false" />
+    <list default="true" id="29646867-ff42-41d0-9f36-905049c79cef" name="Changes" comment="c端完成全部购物车业务代码开发">
+      <change afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/controller/user/AddressBookController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/mapper/AddressBookMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/service/AddressBookService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/service/impl/AddressBookServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sky-server/src/main/resources/mapper/AddressBookMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sky-server/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/resources/application-dev.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sky-server/target/classes/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/target/classes/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sky-server/target/classes/com/sky/controller/user/ShoppingCartController.class" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/target/classes/com/sky/controller/user/ShoppingCartController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sky-server/target/classes/com/sky/mapper/ShoppingCartMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/target/classes/com/sky/mapper/ShoppingCartMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sky-server/target/classes/com/sky/service/ShoppingCartService.class" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/target/classes/com/sky/service/ShoppingCartService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sky-server/target/classes/com/sky/service/impl/ShoppingCartServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/target/classes/com/sky/service/impl/ShoppingCartServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sky-server/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sky-server/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,11 +82,11 @@
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "Spring Boot.SkyApplication.executor": "Debug",
+    "Spring Boot.SkyApplication.executor": "Run",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "E:/project/sky-take-out/sky-server/src/main/resources/mapper",
+    "last_opened_file_path": "E:/project/sky-take-out/sky-server/src/main/java/com/sky/service/impl",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -112,11 +110,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\project\sky-take-out\sky-server\src\main\resources\mapper" />
-      <recent name="E:\project\sky-take-out\sky-server\src\main\java\com\sky\controller\user" />
-      <recent name="E:\project\sky-take-out\sky-server\src\main\java\com\sky\controller\admin" />
       <recent name="E:\project\sky-take-out\sky-server\src\main\java\com\sky\service\impl" />
       <recent name="E:\project\sky-take-out\sky-server\src\main\java\com\sky\service" />
+      <recent name="E:\project\sky-take-out\sky-server\src\main\resources\mapper" />
+      <recent name="E:\project\sky-take-out\sky-server\src\main\java\com\sky\mapper" />
+      <recent name="E:\project\sky-take-out\sky-server\src\main\java\com\sky\controller\user" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.sky.interceptor" />
@@ -302,7 +300,15 @@
       <option name="project" value="LOCAL" />
       <updated>1758461387550</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="c端完成全部购物车业务代码开发">
+      <option name="closed" value="true" />
+      <created>1758465026684</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1758465026684</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -335,7 +341,8 @@
     <MESSAGE value="c端缓存套餐代码开发" />
     <MESSAGE value="c端添加购物车业务代码开发" />
     <MESSAGE value="c端查看购物车业务代码开发" />
-    <option name="LAST_COMMIT_MESSAGE" value="c端查看购物车业务代码开发" />
+    <MESSAGE value="c端完成全部购物车业务代码开发" />
+    <option name="LAST_COMMIT_MESSAGE" value="c端完成全部购物车业务代码开发" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
