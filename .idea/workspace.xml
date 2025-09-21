@@ -4,18 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29646867-ff42-41d0-9f36-905049c79cef" name="Changes" comment="c端缓存菜品业务代码开发">
+    <list default="true" id="29646867-ff42-41d0-9f36-905049c79cef" name="Changes" comment="c端缓存套餐代码开发">
+      <change afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/controller/user/ShoppingCartController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/mapper/ShoppingCartMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/service/ShoppingCartService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/service/impl/ShoppingCartServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sky-server/src/main/resources/mapper/ShoppingCartMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/SkyApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/SkyApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/controller/admin/SetMealController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/controller/admin/SetMealController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/controller/user/SetmealController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/controller/user/SetmealController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sky-server/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/resources/application-dev.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sky-server/target/classes/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/target/classes/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sky-server/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sky-server/target/classes/com/sky/SkyApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/target/classes/com/sky/SkyApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sky-server/target/classes/com/sky/controller/admin/SetMealController.class" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/target/classes/com/sky/controller/admin/SetMealController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sky-server/target/classes/com/sky/controller/user/SetmealController.class" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/target/classes/com/sky/controller/user/SetmealController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sky-server/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,11 +81,11 @@
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "Spring Boot.SkyApplication.executor": "Run",
+    "Spring Boot.SkyApplication.executor": "Debug",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "E:/project/hm-dianping",
+    "last_opened_file_path": "E:/project/sky-take-out/sky-server/src/main/resources/mapper",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -112,11 +109,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\project\sky-take-out\sky-server\src\main\resources\mapper" />
       <recent name="E:\project\sky-take-out\sky-server\src\main\java\com\sky\controller\user" />
       <recent name="E:\project\sky-take-out\sky-server\src\main\java\com\sky\controller\admin" />
       <recent name="E:\project\sky-take-out\sky-server\src\main\java\com\sky\service\impl" />
       <recent name="E:\project\sky-take-out\sky-server\src\main\java\com\sky\service" />
-      <recent name="E:\project\sky-take-out\sky-server\src\main\resources\mapper" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.sky.interceptor" />
@@ -278,7 +275,15 @@
       <option name="project" value="LOCAL" />
       <updated>1758443091292</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="c端缓存套餐代码开发">
+      <option name="closed" value="true" />
+      <created>1758447390319</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1758447390319</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -308,7 +313,8 @@
     <MESSAGE value="店铺营业设置业务代码开发" />
     <MESSAGE value="c端登录页面业务代码开发" />
     <MESSAGE value="c端缓存菜品业务代码开发" />
-    <option name="LAST_COMMIT_MESSAGE" value="c端缓存菜品业务代码开发" />
+    <MESSAGE value="c端缓存套餐代码开发" />
+    <option name="LAST_COMMIT_MESSAGE" value="c端缓存套餐代码开发" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -317,11 +323,6 @@
           <url>file://$PROJECT_DIR$/sky-server/src/main/java/com/sky/controller/user/UserController.java</url>
           <line>38</line>
           <option name="timeStamp" value="20" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/sky-server/src/main/java/com/sky/controller/user/DishController.java</url>
-          <line>33</line>
-          <option name="timeStamp" value="23" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
