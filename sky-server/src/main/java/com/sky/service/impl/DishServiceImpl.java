@@ -1,5 +1,7 @@
 package com.sky.service.impl;
 
+import cn.hutool.json.JSONArray;
+import cn.hutool.json.JSONUtil;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.sky.constant.MessageConstant;
@@ -20,11 +22,13 @@ import com.sky.vo.DishVO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 import static com.sky.constant.MessageConstant.CATEGORY_BE_RELATED_BY_SETMEAL;
 
@@ -38,6 +42,10 @@ public class DishServiceImpl implements DishService {
     private DishFlavorMapper dishFlavorMapper;
     @Autowired
     private CategoryMapper categoryMapper;
+    @Autowired
+    private StringRedisTemplate stringRedisTemplate;
+
+    private String pre_key = "dish_";
 
 
     /**
@@ -73,6 +81,10 @@ public class DishServiceImpl implements DishService {
             // 批量插入口味
             dishFlavorMapper.insertBatch(flavors);
         }
+
+        // 删除缓存
+        Long categoryId = dish.getCategoryId();
+        deleteCache(pre_key + categoryId);
 
 
     }
@@ -119,6 +131,9 @@ public class DishServiceImpl implements DishService {
 
         // 4.删除菜品口味信息
         dishFlavorMapper.deleteBatch(ids);
+
+        // 删除缓存
+        deleteCache(pre_key + "*");
 
         return Result.success();
     }
@@ -167,6 +182,10 @@ public class DishServiceImpl implements DishService {
             // 4.插入口味有关信息
             dishFlavorMapper.insertBatch(flavors);
         }
+
+        // 删除缓存
+        deleteCache(pre_key + "*");
+
         return Result.success();
     }
 
@@ -204,6 +223,18 @@ public class DishServiceImpl implements DishService {
      * @return
      */
     public List<DishVO> listWithFlavor(Dish dish) {
+        String key = "dish_" + dish.getCategoryId();
+        // 1.先去缓存中查
+        String dishListJson = stringRedisTemplate.opsForValue().get(key);
+
+        if (!JSONUtil.isNull(dishListJson)) {
+            // redis中有数据，直接返回
+            JSONArray jsonArray = JSONUtil.parseArray(dishListJson);
+            List<DishVO> list = JSONUtil.toList(jsonArray, DishVO.class);
+            return list;
+        }
+
+        // 2.没有数据去数据库中查询
         List<Dish> dishList = dishMapper.list(dish);
 
         List<DishVO> dishVOList = new ArrayList<>();
@@ -219,6 +250,24 @@ public class DishServiceImpl implements DishService {
             dishVOList.add(dishVO);
         }
 
+        // 3.将数据写入redis中
+        String jsonStr = JSONUtil.toJsonStr(dishVOList);
+        stringRedisTemplate.opsForValue().set(key, jsonStr);
+
         return dishVOList;
     }
+
+    private void deleteCache(String pattern) {
+        if (pattern.contains("*")) {
+            // 使用通配符删除多个key
+            Set<String> keys = stringRedisTemplate.keys(pattern);
+            if (keys != null && !keys.isEmpty()) {
+                stringRedisTemplate.delete(keys);
+            }
+        } else {
+            // 删除单个key
+            stringRedisTemplate.delete(pattern);
+        }
+    }
+
 }
