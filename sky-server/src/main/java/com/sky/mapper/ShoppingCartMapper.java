@@ -6,6 +6,8 @@ import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Update;
 
+import java.util.List;
+
 @Mapper
 public interface ShoppingCartMapper {
 
@@ -14,7 +16,7 @@ public interface ShoppingCartMapper {
      * @param shoppingCart
      * @return
      */
-    ShoppingCart select(ShoppingCart shoppingCart);
+    List<ShoppingCart> select(ShoppingCart shoppingCart);
 
     /**
      * 新增购物车数据

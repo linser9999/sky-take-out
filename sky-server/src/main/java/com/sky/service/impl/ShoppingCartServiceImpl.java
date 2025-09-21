@@ -17,6 +17,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Service
 @Slf4j
@@ -40,19 +41,31 @@ public class ShoppingCartServiceImpl implements ShoppingCartService {
         ShoppingCart shoppingCart1 = BeanUtil.copyProperties(shoppingCartDTO, ShoppingCart.class);
 
         // 1.根据shoppingCartDTO查询是否有数据
-        ShoppingCart shoppingCart = shoppingCartMapping.select(shoppingCart1);
+        List<ShoppingCart> shoppingCart = shoppingCartMapping.select(shoppingCart1);
 
         // 2.没有数据，插入新数据
-        if (BeanUtil.isEmpty(shoppingCart)) {
+        if (shoppingCart.isEmpty()) {
             // 添加数据
             addNewShoppingCart(shoppingCart1);
             return Result.success();
         }
 
         // 3.有数据，将数据数量 +1
-        shoppingCartMapping.plusById(shoppingCart.getId());
+        shoppingCartMapping.plusById(shoppingCart.get(0).getId());
 
         return Result.success();
+    }
+
+    /***
+     * 查看购物车
+     * @return
+     */
+    @Override
+    public List<ShoppingCart> list() {
+        ShoppingCart shoppingCart = new ShoppingCart();
+        shoppingCart.setUserId(BaseContext.getCurrentId());
+        List<ShoppingCart> list = shoppingCartMapping.select(shoppingCart);
+        return list;
     }
 
     /***
