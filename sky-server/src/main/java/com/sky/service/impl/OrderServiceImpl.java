@@ -2,8 +2,11 @@ package com.sky.service.impl;
 
 import cn.hutool.core.bean.BeanUtil;
 import com.alibaba.fastjson.JSONObject;
+import com.github.pagehelper.Page;
+import com.github.pagehelper.PageHelper;
 import com.sky.constant.MessageConstant;
 import com.sky.context.BaseContext;
+import com.sky.dto.HistoryOrdersPageQueryDTO;
 import com.sky.dto.OrdersPaymentDTO;
 import com.sky.dto.OrdersSubmitDTO;
 import com.sky.entity.*;
@@ -14,6 +17,7 @@ import com.sky.mapper.AddressBookMapper;
 import com.sky.mapper.OrderDetailMapper;
 import com.sky.mapper.OrderMapper;
 import com.sky.mapper.ShoppingCartMapper;
+import com.sky.result.PageResult;
 import com.sky.result.Result;
 import com.sky.service.OrderService;
 import com.sky.vo.OrderPaymentVO;
@@ -160,5 +164,63 @@ public class OrderServiceImpl implements OrderService {
                 .build();
 
         orderMapper.update(orders);
+    }
+
+    /***
+     *根据id查询订单
+     * @param id
+     * @return
+     */
+    @Override
+    public Result<OrderVO> getById(String id) {
+
+        // 1.根据id查询orders信息
+        Orders orders = orderMapper.getById(id);
+
+        // 2.根据order_id查询order_detail信息
+        List<OrderDetail> orderDetails = orderDetailMapper.getByOrderId(id);
+
+        // 封装数据并返回
+        OrderVO orderVO = BeanUtil.copyProperties(orders, OrderVO.class);
+        orderVO.setOrderDetailList(orderDetails);
+        return Result.success(orderVO);
+    }
+
+    /**
+     * 查看历史订单
+     * @param historyOrdersPageQueryDTO
+     * @return
+     */
+    @Override
+    public Result<PageResult> historyOrders(HistoryOrdersPageQueryDTO historyOrdersPageQueryDTO) {
+
+        // 分页
+        Page<Object> page = PageHelper.startPage(historyOrdersPageQueryDTO.getPage(), historyOrdersPageQueryDTO.getPageSize());
+
+        // 1.根据userId查询所有orders(附加条件status查询)
+        Orders order = new Orders();
+        order.setUserId(BaseContext.getCurrentId());
+        order.setStatus(historyOrdersPageQueryDTO.getStatus());
+        Page<Orders> orderList = orderMapper.getByUserId(order);
+
+        // 如果没有历史记录，返回空
+        if (orderList.isEmpty()) {
+            return Result.success(new PageResult());
+        }
+
+        // 新建返回数据
+        Page<OrderVO> orderVOList = new Page<>();
+
+        // 查询每个订单的菜品信息
+        for (Orders o : orderList) {
+            // 组装订单信息
+            List<OrderDetail> orderDetailList = orderDetailMapper.getByOrderId(String.valueOf(o.getId()));
+            OrderVO orderVO = BeanUtil.copyProperties(o, OrderVO.class);
+            orderVO.setOrderDetailList(orderDetailList);
+            // 将订单加入orderVOList
+            orderVOList.add(orderVO);
+        }
+
+        return Result.success(new PageResult(orderVOList.getTotal(), orderVOList.getResult()));
     }
 }
