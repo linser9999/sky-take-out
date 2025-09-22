@@ -4,17 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29646867-ff42-41d0-9f36-905049c79cef" name="Changes" comment="c端完成全部购物车业务代码开发">
-      <change afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/controller/user/OrderController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/mapper/OrderDetailMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/mapper/OrderMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/service/OrderService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/service/impl/OrderServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sky-server/src/main/resources/mapper/OrderDetailMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sky-server/src/main/resources/mapper/OrderMapper.xml" afterDir="false" />
+    <list default="true" id="29646867-ff42-41d0-9f36-905049c79cef" name="Changes" comment="c端完成用户下单业务代码开发">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/controller/user/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/controller/user/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/mapper/OrderMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/mapper/OrderMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/service/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/service/impl/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/service/impl/OrderServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sky-server/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/resources/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sky-server/src/main/resources/mapper/OrderMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/resources/mapper/OrderMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sky-server/target/classes/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/target/classes/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sky-server/target/classes/com/sky/service/impl/OrderServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/target/classes/com/sky/service/impl/OrderServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sky-server/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +87,7 @@
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "E:/project/sky-take-out/sky-server/src/main/java/com/sky/service/impl",
+    "last_opened_file_path": "E:/project/sky-take-out/sky-server/src/main/java/com/sky/controller/user",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -111,11 +111,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\project\sky-take-out\sky-server\src\main\java\com\sky\controller\user" />
       <recent name="E:\project\sky-take-out\sky-server\src\main\java\com\sky\service\impl" />
       <recent name="E:\project\sky-take-out\sky-server\src\main\java\com\sky\service" />
       <recent name="E:\project\sky-take-out\sky-server\src\main\resources\mapper" />
       <recent name="E:\project\sky-take-out\sky-server\src\main\java\com\sky\mapper" />
-      <recent name="E:\project\sky-take-out\sky-server\src\main\java\com\sky\controller\user" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.sky.interceptor" />
@@ -164,7 +164,7 @@
       <workItem from="1758274540964" duration="19377000" />
       <workItem from="1758333776252" duration="30472000" />
       <workItem from="1758426172880" duration="5878000" />
-      <workItem from="1758517558970" duration="7594000" />
+      <workItem from="1758517558970" duration="10119000" />
     </task>
     <task id="LOCAL-00001" summary="苍穹外码项目初始化代码">
       <option name="closed" value="true" />
@@ -310,7 +310,15 @@
       <option name="project" value="LOCAL" />
       <updated>1758465026684</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="c端完成用户下单业务代码开发">
+      <option name="closed" value="true" />
+      <created>1758526519868</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1758526519868</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -344,7 +352,8 @@
     <MESSAGE value="c端添加购物车业务代码开发" />
     <MESSAGE value="c端查看购物车业务代码开发" />
     <MESSAGE value="c端完成全部购物车业务代码开发" />
-    <option name="LAST_COMMIT_MESSAGE" value="c端完成全部购物车业务代码开发" />
+    <MESSAGE value="c端完成用户下单业务代码开发" />
+    <option name="LAST_COMMIT_MESSAGE" value="c端完成用户下单业务代码开发" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
