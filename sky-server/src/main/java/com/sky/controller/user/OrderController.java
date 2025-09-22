@@ -77,4 +77,28 @@ public class OrderController {
         log.info("查看历史订单：{}", historyOrdersPageQueryDTO);
         return orderService.historyOrders(historyOrdersPageQueryDTO);
     }
+
+    /**
+     * 取消订单
+     * @param id
+     * @return
+     */
+    @ApiOperation(value = "取消订单")
+    @PutMapping("/cancel/{id}")
+    public Result cancel(@PathVariable String id) {
+        log.info("取消订单：{}", id);
+        return orderService.cancel(id);
+    }
+
+    /**
+     * 再来一单
+     * @param id
+     * @return
+     */
+    @PostMapping("/repetition/{id}")
+    @ApiOperation(value = "再来一单")
+    public Result repetition(@PathVariable String id) {
+        log.info("再来一单：{}", id);
+        return orderService.repetition(id);
+    }
 }

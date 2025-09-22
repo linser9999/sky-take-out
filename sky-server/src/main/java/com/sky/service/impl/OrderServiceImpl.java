@@ -172,6 +172,7 @@ public class OrderServiceImpl implements OrderService {
      * @return
      */
     @Override
+    @Transactional
     public Result<OrderVO> getById(String id) {
 
         // 1.根据id查询orders信息
@@ -192,6 +193,7 @@ public class OrderServiceImpl implements OrderService {
      * @return
      */
     @Override
+    @Transactional
     public Result<PageResult> historyOrders(HistoryOrdersPageQueryDTO historyOrdersPageQueryDTO) {
 
         // 分页
@@ -222,5 +224,65 @@ public class OrderServiceImpl implements OrderService {
         }
 
         return Result.success(new PageResult(orderVOList.getTotal(), orderVOList.getResult()));
+    }
+
+    /**
+     * 取消订单
+     * @param id
+     * @return
+     */
+    @Override
+    @Transactional
+    public Result cancel(String id) {
+        Orders order = orderMapper.getById(id);
+
+        Integer status = order.getStatus();
+
+        if (status > Orders.TO_BE_CONFIRMED) {
+            // 不满足退单条件
+            throw new OrderBusinessException(MessageConstant.ORDER_NOT_ALLOW_CANCEL);
+        }
+
+        // 订单处于待接单状态下取消，需要进行退款
+        if (order.getStatus().equals(Orders.TO_BE_CONFIRMED)) {
+            //调用微信支付退款接口
+            //  weChatPayUtil.refund(
+            //          ordersDB.getNumber(), //商户订单号
+            //          ordersDB.getNumber(), //商户退款单号
+            //          new BigDecimal(0.01),//退款金额，单位 元
+            //          new BigDecimal(0.01));//原订单金额
+
+            //支付状态修改为 退款
+            order.setPayStatus(Orders.REFUND);
+        }
+
+        // 退单操作
+        order.setStatus(Orders.CANCELLED);
+        orderMapper.updateStatus(order);
+
+        // 模拟退钱
+        log.info("退回金额：{}", order.getAmount());
+
+        return Result.success();
+    }
+
+    @Override
+    public Result repetition(String id) {
+        // 1.根据id查询菜品信息
+        List<OrderDetail> orderDetailList = orderDetailMapper.getByOrderId(id);
+
+        // 2.加入购物车
+        ArrayList<ShoppingCart> list = new ArrayList<>();
+        for (OrderDetail orderDetail : orderDetailList) {
+            // 转为购物车对象
+            ShoppingCart shoppingCart = BeanUtil.copyProperties(orderDetail, ShoppingCart.class);
+            shoppingCart.setUserId(BaseContext.getCurrentId());
+            shoppingCart.setCreateTime(LocalDateTime.now());
+            list.add(shoppingCart);
+        }
+        // 插入数据库
+        shoppingCartMapper.addBatch(list);
+
+        return Result.success();
     }
 }

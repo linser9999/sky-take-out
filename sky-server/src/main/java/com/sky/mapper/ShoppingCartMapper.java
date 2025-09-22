@@ -28,6 +28,12 @@ public interface ShoppingCartMapper {
             "(#{name},#{image},#{userId},#{dishId},#{setmealId},#{dishFlavor},#{amount},#{createTime},#{number})")
     void add(ShoppingCart shoppingCart);
 
+    /**
+     * 批量加入购物车数据
+     * @param list
+     */
+    void addBatch(List<ShoppingCart> list);
+
     /***
      * 增加数据库number
      * @param id

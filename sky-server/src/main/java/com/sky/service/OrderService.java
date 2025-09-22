@@ -46,4 +46,18 @@ public interface OrderService {
      * @return
      */
     Result<PageResult> historyOrders(HistoryOrdersPageQueryDTO historyOrdersPageQueryDTO);
+
+    /**
+     * 取消订单
+     * @param id
+     * @return
+     */
+    Result cancel(String id);
+
+    /**
+     * 再来一单
+     * @param id
+     * @return
+     */
+    Result repetition(String id);
 }

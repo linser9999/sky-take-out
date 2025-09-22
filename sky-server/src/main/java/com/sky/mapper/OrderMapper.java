@@ -2,8 +2,10 @@ package com.sky.mapper;
 
 import com.github.pagehelper.Page;
 import com.sky.entity.Orders;
+import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.Update;
 
 import java.util.List;
 
@@ -43,4 +45,17 @@ public interface OrderMapper {
      * @return
      */
     Page<Orders> getByUserId(Orders order);
+
+    /**
+     * 根据订单id删除订单信息
+     * @param id
+     */
+    @Delete("delete from orders where id = #{id}")
+    void deleteByid(String id);
+
+    /**
+     * 退单操作
+     * @param
+     */
+    void updateStatus(Orders order);
 }
