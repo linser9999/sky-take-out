@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29646867-ff42-41d0-9f36-905049c79cef" name="Changes" comment="用户下单功能，加入校验逻辑，如果用户的收货地址距离商家门店超出配送范围（配送范围为5公里内），则下单失败">
-      <change afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/task/OrderTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/SkyApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/SkyApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/mapper/OrderMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/mapper/OrderMapper.java" afterDir="false" />
+    <list default="true" id="29646867-ff42-41d0-9f36-905049c79cef" name="Changes" comment="订单状态定时处理业务代码开发1">
+      <change afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/config/WebSocketConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/websocket/WebSocketServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/controller/user/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/controller/user/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/service/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/service/impl/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/service/impl/OrderServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sky-server/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/resources/application-dev.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sky-server/target/classes/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/target/classes/application-dev.yml" afterDir="false" />
     </list>
@@ -82,7 +84,7 @@
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "E:/project/GraceGateway",
+    "last_opened_file_path": "E:/project/sky-take-out/sky-server/src/main/java/com/sky/config",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -165,7 +167,7 @@
       <workItem from="1758333776252" duration="30472000" />
       <workItem from="1758426172880" duration="5878000" />
       <workItem from="1758517558970" duration="30336000" />
-      <workItem from="1758586595298" duration="24615000" />
+      <workItem from="1758586595298" duration="26066000" />
     </task>
     <task id="LOCAL-00001" summary="苍穹外码项目初始化代码">
       <option name="closed" value="true" />
@@ -367,7 +369,15 @@
       <option name="project" value="LOCAL" />
       <updated>1758617156128</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="订单状态定时处理业务代码开发1">
+      <option name="closed" value="true" />
+      <created>1758632806208</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1758632806208</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -408,7 +418,8 @@
     <MESSAGE value="商家端订单管理模块业务代码开发" />
     <MESSAGE value="修复客户端套餐不可见问题" />
     <MESSAGE value="用户下单功能，加入校验逻辑，如果用户的收货地址距离商家门店超出配送范围（配送范围为5公里内），则下单失败" />
-    <option name="LAST_COMMIT_MESSAGE" value="用户下单功能，加入校验逻辑，如果用户的收货地址距离商家门店超出配送范围（配送范围为5公里内），则下单失败" />
+    <MESSAGE value="订单状态定时处理业务代码开发1" />
+    <option name="LAST_COMMIT_MESSAGE" value="订单状态定时处理业务代码开发1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
