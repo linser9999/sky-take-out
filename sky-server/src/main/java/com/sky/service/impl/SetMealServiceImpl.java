@@ -1,5 +1,6 @@
 package com.sky.service.impl;
 
+import cn.hutool.json.JSONUtil;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.sky.constant.StatusConstant;
@@ -19,6 +20,7 @@ import com.sky.vo.DishItemVO;
 import com.sky.vo.SetmealVO;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -36,6 +38,10 @@ public class SetMealServiceImpl implements SetMealService {
     private SetmealMapper setmealMapper;
     @Autowired
     private SetmealDishMapper setmealDishMapper;
+    @Autowired
+    private StringRedisTemplate stringRedisTemplate;
+
+    private String key = "dish_";
 
     /**
      * 根据id查询套餐
@@ -44,6 +50,7 @@ public class SetMealServiceImpl implements SetMealService {
      */
     @Override
     public SetmealVO getById(Long id) {
+
         // 1.查询套餐基本信息
          Setmeal setmeal = setmealMapper.selectById(id);
 
@@ -142,7 +149,7 @@ public class SetMealServiceImpl implements SetMealService {
     public Result deleteByIds(List<Long> ids) {
         for (Long id : ids) {
             Setmeal setmeal = setmealMapper.selectById(id);
-            if (setmeal.getStatus() != null && setmeal.getStatus() == StatusConstant.ENABLE) {
+            if (setmeal.getStatus() != null && setmeal.getStatus().equals(StatusConstant.ENABLE)) {
                 throw new DeletionNotAllowedException(SETMEAL_ON_SALE);
             }
         }
@@ -177,6 +184,13 @@ public class SetMealServiceImpl implements SetMealService {
      * @return
      */
     public List<Setmeal> list(Setmeal setmeal) {
+        // 查缓存
+        String s = stringRedisTemplate.opsForValue().get(key + setmeal.getCategoryId());
+        if (s != null) {
+            JSONUtil.parseArray(s);
+            List<Setmeal> list = JSONUtil.toList(s, Setmeal.class);
+            return list;
+        }
         List<Setmeal> list = setmealMapper.list(setmeal);
         return list;
     }

@@ -184,7 +184,9 @@ public class OrderServiceImpl implements OrderService {
 
         // 封装数据并返回
         OrderVO orderVO = BeanUtil.copyProperties(orders, OrderVO.class);
-        orderVO.setOrderDetailList(orderDetails);
+        if (orderVO != null) {
+            orderVO.setOrderDetailList(orderDetails);
+        }
         return Result.success(orderVO);
     }
 
