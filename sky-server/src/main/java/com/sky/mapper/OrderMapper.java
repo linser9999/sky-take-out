@@ -1,7 +1,10 @@
 package com.sky.mapper;
 
 import com.github.pagehelper.Page;
+import com.sky.dto.OrdersPageQueryDTO;
+import com.sky.dto.OrdersPaymentDTO;
 import com.sky.entity.Orders;
+import com.sky.result.PageResult;
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
@@ -58,4 +61,32 @@ public interface OrderMapper {
      * @param
      */
     void updateStatus(Orders order);
+
+    /**
+     * 根据条件查询
+     * @param ordersPageQueryDTO
+     * @return
+     */
+    Page<Orders> conditionSearch(OrdersPageQueryDTO ordersPageQueryDTO);
+
+    /**
+     * 查询待接单数量
+     */
+    @Select("select count(*)  from orders where status = 2")
+    Integer countToBeConfirmed();
+
+    /**
+     * 查询待派送数量
+     * @return
+     */
+    @Select("select count(*)  from orders where status = 3")
+    Integer countConfirmed();
+
+    /**
+     * 查询派送中数量
+     * @return
+     */
+    @Select("select count(*)  from orders where status = 4")
+    Integer countDeliveryInProgress();
+
 }
